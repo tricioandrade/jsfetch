@@ -7,9 +7,9 @@ const request = {
 }
 
 
-let box = document.querySelector('.box');
+let box = document.querySelector('.todo');
 
-request.get('https://www.google.com/tricioandrade')
+request.get('https://jsonplaceholder.typicode.com/todos/1')
 .then(data => {
   box.innerHTML = data;
   console.log(data)
