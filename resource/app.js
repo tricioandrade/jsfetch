@@ -1,7 +1,12 @@
-export const request = {
-  get: async function(uri){
-     const r = await fetch(uri);
-     console.log(r);
-     return await r.json();
+export class request{
+	constructor (uri){
+		this.url = uri;
+
+	}
+
+  async get(){
+     const response = await fetch(this.url);
+   
+     return await response.json();
   }
 }

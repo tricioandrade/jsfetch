@@ -1,17 +1,19 @@
 import {request} from './resource/app.js';
 
-let box = document.querySelector('.todo ul');
+let box = document.querySelector('div.todo ul');
 
-function setTodo(todos){
-	for(const key in todos) {
-		box.innerHTML = `<li>${todos.title}</li>`;
-	}
-}
+const req = new request('https://jsonplaceholder.typicode.com/todos');
 
-request.get('https://jsonplaceholder.typicode.com/todos/50')
+req.get()
 .then(data => {
-  console.log(data)
-  box.innerHTML = (data);
-  
+	console.log(data);
+	data.forEach(element => {
+		console.log(element)
+		box.innerHTML +=`<li class='row shadow-lg rounded mb-3 p-2'>
+							<span class='col-1'><i class='fa fa-user-id'></i></span>
+							<span class='col-2'>${element.id}</span>
+							<span class='col-9'>${element.title}</span>
+						</li>`;
+	});
 })
-.catch(erro => console.log(erro));
+.catch(erro => box.innerHTML = erro);
