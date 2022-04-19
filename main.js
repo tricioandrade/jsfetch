@@ -20,9 +20,9 @@ function listTodos(todos) {
   
 	todos.forEach(element => {
 		console.log(element)
-		box.innerHTML +=`<li class='row shadow-lg rounded mb-3 p-2 list-group-item'>
-							<span class='col-2'>${element.id}</span>
-							<span class='col-10'>${element.title}</span>
+		box.innerHTML +=`<li class='row shadow-lg rounded mb-3 p-2 list-group-item col-sm-12 m-auto'>
+							<span class='col-lg-2 col-sm-1'>${element.id}</span>
+							<span class='col-10 col-sm-11'>${element.title}</span>
 						</li>`;
 	});
   

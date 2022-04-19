@@ -1,11 +1,12 @@
 body{
+ 
 }
 
 .preloader { 
     position:fixed;
-    width:1em;
-    height:7em;
-    left:50%;
+    width:0.4rem;
+    height:0.7em;
+    left:20%;
     bottom:35%;
     background-size:100%;
     background-position:top;
