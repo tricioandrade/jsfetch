@@ -4,8 +4,8 @@ body{
 
 .preloader { 
     position:fixed;
-    width:0.4rem;
-    height:0.7em;
+    width:40px;
+    height:40px;
     left:20%;
     bottom:35%;
     background-size:100%;
